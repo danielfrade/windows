@@ -1,4 +1,12 @@
-# Script Avançado de Otimização para Windows - Máxima Velocidade e Responsividade
+# Verifica se o script está sendo executado como administrador
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Host "Este script requer privilégios de administrador. Solicitando elevação..." -ForegroundColor Yellow
+    # Reinicia o script com permissões de administrador
+    Start-Process powershell.exe -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+    Exit
+}
+
+# Após a verificação, o script continua normalmente
 Write-Host "Iniciando otimizações avançadas para seu Windows..." -ForegroundColor Green
 
 # 1. Desativar efeitos visuais completamente para máximo desempenho
@@ -11,9 +19,7 @@ Set-ItemProperty -Path "HKCU:\Control Panel\Desktop\WindowMetrics" -Name "MinAni
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ListviewShadow" -Value 0
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "EnableAeroPeek" -Value 0
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "Composition" -Value 0
-# Desativa efeitos de arrastar janelas em tela cheia
 Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "DragFullWindows" -Value 0
-# Remove bordas visuais desnecessárias
 Set-ItemProperty -Path "HKCU:\Control Panel\Desktop\WindowMetrics" -Name "BorderWidth" -Value 0
 
 # 2. Desativar serviços desnecessários (ampliado e otimizado)
@@ -40,7 +46,6 @@ foreach ($service in $services) {
 Write-Host "Desativando inicialização rápida, hibernação e otimizando memória..."
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" -Name "HiberbootEnabled" -Value 0
 powercfg /hibernate off
-# Desativa arquivo de paginação (se houver RAM suficiente, ajuste conforme necessário)
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" -Name "PagingFiles" -Value ""
 
 # 4. Configurar plano de energia para desempenho máximo
