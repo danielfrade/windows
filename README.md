@@ -1,5 +1,5 @@
 **Otimização Extrema do Windows com PowerShell (Execute em modo administrador)**  
-Transforme seu Windows 11 em uma máquina rápida e eficiente com este script poderoso!
+Transforme seu Windows em uma máquina rápida e eficiente com este script poderoso!
 esative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos,
 garantindo máxima responsividade.
 
