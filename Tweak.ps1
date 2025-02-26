@@ -7,6 +7,27 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "UserPreferencesMask" -Value ([byte[]](0x90,0x12,0x03,0x80,0x10,0x00,0x00,0x00))
 Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "FontSmoothing" -Value 0
 
+# Define a configuração de efeitos visuais para "Melhor desempenho" (desativa tudo)
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" -Name "VisualFXSetting" -Value 2
+
+# Configura manualmente o UserPreferencesMask para desativar animações, sombras e suavizações
+Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "UserPreferencesMask" -Value ([byte[]](0x90,0x12,0x03,0x80,0x10,0x00,0x00,0x00))
+
+# Desativa suavização de fontes
+Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "FontSmoothing" -Value 0
+
+# Desativa animações na barra de tarefas e janelas
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAnimations" -Value 0
+Set-ItemProperty -Path "HKCU:\Control Panel\Desktop\WindowMetrics" -Name "MinAnimate" -Value 0
+
+# Desativa sombras sob o cursor e janelas
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ListviewShadow" -Value 0
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "EnableAeroPeek" -Value 0
+
+# Desativa transparência e efeitos Aero
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "Composition" -Value 0
+
+
 # 2. Desativar serviços desnecessários (ampliado)
 Write-Host "Desativando serviços desnecessários..."
 $services = @(
@@ -71,16 +92,16 @@ Write-Host "Desativando recursos adicionais..."
 Disable-WindowsOptionalFeature -Online -FeatureName "WindowsMediaFeatures" -NoRestart -ErrorAction SilentlyContinue
 Disable-WindowsOptionalFeature -Online -FeatureName "Internet-Explorer-Optional-amd64" -NoRestart -ErrorAction SilentlyContinue
 
-# 8. Ajustar configurações de desempenho do processador (11ª geração Intel)
+# 8. Ajustar configurações de desempenho do processador
 Write-Host "Otimizando desempenho do processador..."
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" -Name "Value" -Value 100
 
-# 9. Verificar e reparar arquivos de sistema
+# 9. Verificar e reparar arquivos de sistema, importante para reparo
 Write-Host "Verificando e reparando integridade do sistema..."
 sfc /scannow
 DISM /Online /Cleanup-Image /RestoreHealth
 
-# 10. Desativar notificações e dicas do Windows
+# 10. Desativar notificações e dicas do Windows, otimiza e diminui recursos
 Write-Host "Desativando notificações e dicas..."
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNotifications" -Name "ToastEnabled" -Value 0
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowSyncProviderNotifications" -Value 0
