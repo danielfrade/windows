@@ -1,5 +1,7 @@
 **Otimização Extrema do Windows 11 com PowerShell**  
-Transforme seu Windows 11 em uma máquina rápida e eficiente com este script poderoso! Desative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos, garantindo máxima responsividade.
+Transforme seu Windows 11 em uma máquina rápida e eficiente com este script poderoso!
+esative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos,
+garantindo máxima responsividade.
 
 **Funcionalidades do Script**  
 - **Desativação de Serviços**: Remove processos como telemetria, Xbox e indexação, reduzindo o uso de CPU e RAM.  
