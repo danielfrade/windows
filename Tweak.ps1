@@ -1,5 +1,5 @@
-# Script Avançado de Otimização para Windows 11 - Máxima Velocidade e Responsividade
-Write-Host "Iniciando otimizações avançadas para Windows 11..." -ForegroundColor Green
+# Script Avançado de Otimização para Windows - Máxima Velocidade e Responsividade
+Write-Host "Iniciando otimizações avançadas para seu Windows..." -ForegroundColor Green
 
 # 1. Desativar efeitos visuais completamente para máximo desempenho
 Write-Host "Desativando todos os efeitos visuais..."
