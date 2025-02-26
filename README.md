@@ -43,14 +43,14 @@ O script oferece as seguintes otimizações:
      ```  
    - Execute o script:  
      ```powershell
-     .\Windows11Optimizer.ps1
+     .\Tweak.ps1
      ```  
 3. Aguarde a Execução:  
    - O script aplicará todas as otimizações automaticamente e exibirá o progresso.  
    - Reinicie o sistema ao final para garantir os efeitos.  
 
 **Estrutura do Projeto**  
-- `Windows11Optimizer.ps1`: Script principal com todas as otimizações.  
+- `Tweak.ps1`: Script principal com todas as otimizações.  
 - `README.md`: Documentação detalhada do projeto.  
 
 **Exemplos de Uso**  
