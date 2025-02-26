@@ -12,7 +12,7 @@ garantindo máxima responsividade.
 **Benefícios que vão além da velocidade**  
 - **Automatize otimizações**: Livre-se de ajustes manuais demorados e aplique mudanças em segundos.  
 - **Reduza travamentos**: Menos processos em segundo plano significam maior estabilidade.  
-- **Aumente a eficiência**: Sinta seu Windows 11 mais leve e responsivo para qualquer tarefa.  
+- **Aumente a eficiência**: Sinta seu Windows mais leve e responsivo para qualquer tarefa.  
 - **Personalize o sistema**: Controle configurações essenciais de forma centralizada e prática.  
 - **Pronto para o futuro**: Ideal para máquinas modernas, como notebooks de 11ª geração, com escalabilidade para qualquer hardware.  
 
@@ -27,7 +27,7 @@ O script oferece as seguintes otimizações:
 **Como Usar**  
 
 **Pré-requisitos**  
-- PowerShell: Requer PowerShell 5.1 ou superior (padrão no Windows 11).  
+- PowerShell: Requer PowerShell 5.1 ou superior (padrão no Windows).  
 - Permissões: Execute como administrador para aplicar todas as mudanças.  
 
 **Executando o Script**  
@@ -54,7 +54,7 @@ O script oferece as seguintes otimizações:
 - `README.md`: Documentação detalhada do projeto.  
 
 **Exemplos de Uso**  
-- **Otimização Completa**: Basta executar o script e aguardar a conclusão para um Windows 11 mais rápido.  
+- **Otimização Completa**: Basta executar o script e aguardar a conclusão para um Windows mais rápido.  
 - **Ajuste Manual**: Edite a lista de serviços no script para manter funcionalidades específicas (ex.: impressão).  
 
 **Contribuindo**  
