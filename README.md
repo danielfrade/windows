@@ -1,4 +1,3 @@
-**(Execute em modo administrador)**
 **Otimização do Windows com PowerShell**  
 Transforme seu Windows em uma máquina rápida e eficiente com este script poderoso!
 esative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos,
