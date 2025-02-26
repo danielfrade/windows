@@ -1,7 +1,7 @@
 **Otimização do Windows com PowerShell**  
-- **(Ative modo administrador)
-- **Transforme seu Windows em uma máquina rápida e eficiente com este script poderoso!
-- **Desative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos,garantindo máxima responsividade.
+- (Ative modo administrador)
+- Transforme seu Windows em uma máquina rápida e eficiente com este script poderoso!
+- Desative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos,garantindo máxima responsividade.
 
 **Funcionalidades do Script**  
 - **Desativação de Serviços**: Remove processos como telemetria, Xbox e indexação, reduzindo o uso de CPU e RAM.  
