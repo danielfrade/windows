@@ -1,7 +1,3 @@
-Aqui está o texto adaptado, focado exclusivamente em um script de otimização do Windows 11, seguindo a estrutura do texto fornecido, mas ajustado para o propósito de melhorar o desempenho do sistema operacional:
-
----
-
 **Otimização Extrema do Windows 11 com PowerShell**  
 Transforme seu Windows 11 em uma máquina rápida e eficiente com este script poderoso! Desative serviços desnecessários, ajuste configurações de desempenho e limpe o sistema em poucos passos, garantindo máxima responsividade.
 
