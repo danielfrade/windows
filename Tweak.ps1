@@ -1,3 +1,6 @@
+# Script de Gestão de Ativos de Equipamentos no Domínio
+# Autor: Daniel Vocurca Frade
+
 # Verifica se o script está sendo executado como administrador
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Host "Este script requer privilégios de administrador. Solicitando elevação..." -ForegroundColor Yellow
