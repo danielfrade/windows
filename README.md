@@ -1,3 +1,12 @@
+**  Windows Defender pode interpretar essas ações como suspeitas devido a heurísticas ou assinaturas genéricas de detecção de malware (como Trojan:Script/Wacatac ou similar).**
+- Vamos analisar o problema e como lidar com isso:
+- Por que isso acontece?
+- Alterações no Registro e Serviços: Seu script modifica chaves do Registro do Windows (ex.: HKLM, HKCU) e desativa serviços do sistema (ex.: wuauserv, SysMain). Essas ações são frequentemente associadas a malwares que tentam desativar proteções ou otimizar o sistema para fins maliciosos.
+- Execução como Administrador: O script solicita elevação de privilégios, algo que malwares também fazem.
+- Comandos Sensíveis: Comandos como powercfg, schtasks, e Remove-Item em locais críticos (ex.: C:\Windows\Temp) podem disparar alertas.
+- Falta de Assinatura Digital: Scripts PowerShell não assinados digitalmente por uma autoridade confiável são mais propensos a serem sinalizados.
+- Heurística do Defender: O Defender usa análise comportamental e pode detectar padrões "suspeitos" mesmo que o script seja legítimo.
+
 **Otimização do Windows com PowerShell**  
 - (Ative modo administrador)
 - Transforme seu Windows em uma máquina rápida e eficiente com este script poderoso!
