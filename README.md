@@ -1,4 +1,4 @@
-**  Windows Defender pode interpretar essas ações como suspeitas devido a heurísticas ou assinaturas genéricas de detecção de malware (como Trojan:Script/Wacatac ou similar).**
+**Windows Defender pode interpretar essas ações como suspeitas devido a heurísticas ou assinaturas genéricas de detecção de malware (como Trojan:Script/Wacatac ou similar).**
 - Vamos analisar o problema e como lidar com isso:
 - Por que isso acontece?
 - Alterações no Registro e Serviços: Seu script modifica chaves do Registro do Windows (ex.: HKLM, HKCU) e desativa serviços do sistema (ex.: wuauserv, SysMain). Essas ações são frequentemente associadas a malwares que tentam desativar proteções ou otimizar o sistema para fins maliciosos.
